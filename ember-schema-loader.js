@@ -115,14 +115,3 @@ var SchemaLoader;
     });
   }
 })();
-
-function findPolymorphicType(baseType, discr) {
-  var type = Ember.ALIASSES[discr];
-  if (!type) {
-    Ember.Logger.warn('Type not found: ' + discr + '. Using ' + baseType);
-    return baseType;
-  }
-  console.log(discr + ' -> ' + type);
-  return type;
-}
-
