@@ -1,0 +1,13 @@
+{
+  "name": "ember-schema-loader",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcus-nl/ember-schema-loader.git"
+  },
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "bower": "latest",
+    "grunt": "latest"
+  }
+}

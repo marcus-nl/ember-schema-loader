@@ -1,0 +1,17 @@
+{
+  "name": "ember-schema-loader",
+  "private": true,
+  "version": "0.1.0",
+  "license": "Apache 2.0",
+  "main": "ember-schema-loader.js",
+  "ignore": [
+    ".gitignore",
+    "bower_components",
+    "node_modules",
+    "package.json"
+  ],
+  "dependencies": {
+    "ember-data": "^1.0.0-beta.8",
+    "ember-data.model-fragments": "^0.2.0"
+  }
+}

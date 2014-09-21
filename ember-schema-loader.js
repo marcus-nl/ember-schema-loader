@@ -66,7 +66,7 @@ var SchemaLoader;
     createClass: function(def) {
       var loader = this;
       var props = {
-          '$type': DS.attr('string'),
+        '$type': DS.attr('string'),
       };
       def.props.forEach(function(prop) {
         if (loader.includeProperty(def, prop)) {
