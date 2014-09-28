@@ -36,7 +36,8 @@ var SchemaLoader;
       var classes = schema.EmberSchema.classes;
       classes.forEach(function(def) {
         def.state = STATE_NEW;
-        def.mode = loader.getClassMode(def);
+        def.mode = MODE_NORMAL;
+        loader.customizeClassDefinition(def);
         loader.index.set(def.name, def);
       });
       
@@ -127,10 +128,10 @@ var SchemaLoader;
     
     /** 
      * @protected
-     * @method includeProperty 
+     * @method customizeClassDefinition 
      **/
-    getClassMode: function(def) {
-      return MODE_NORMAL;
+    customizeClassDefinition: function(def) {
+      // do nothing by default
     },
     
     /** 
@@ -185,7 +186,7 @@ var SchemaLoader;
   });
   
   function printClass(c) {
-    console.log(Ember.inspect(c));
+    console.log(Ember.inspect(c) + ' extends ' + c.superclass);
     c.eachAttribute(function(n,a) {
       console.log('\t' + n + ':\t' + Ember.inspect(a));
     });
